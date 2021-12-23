@@ -20,13 +20,13 @@ PLATFORM_PY = '/opt/cisco/bin/platform.py'
 @click.command()
 def inventory():
     """Show Platform Inventory"""
-    args = [ PLATFORM_PY, 'inventoryshow' ]
+    args = '{} inventoryshow'.format(PLATFORM_PY)
     clicommon.run_command(args)
 
 @click.command()
 def idprom():
     """Show Platform Idprom Inventory"""
-    args = [ PLATFORM_PY, 'idprom' ]
+    args = '{} idprom'.format(PLATFORM_PY)
     clicommon.run_command(args)
 
 def register(cli):
